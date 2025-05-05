@@ -1,0 +1,299 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPdip6Rb+HJNmeki6hzS2/z",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vivs36/learning_python/blob/main/Classes\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yu-cBkkufQc9",
+        "outputId": "2d437a85-36b6-4431-8f3c-81fdb17ac5b1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sum:  22\n",
+            "Diff: 4\n"
+          ]
+        }
+      ],
+      "source": [
+        "class operations:\n",
+        "  def add(a,b):\n",
+        "   print(\"Sum: \",(a+b))\n",
+        "  def subtract(a,b):\n",
+        "   print(\"Diff:\",(a-b))\n",
+        "  add(10,12)\n",
+        "  subtract(9,5)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Volume:\n",
+        "  def vol(self):\n",
+        "    return \"Undefined\"\n",
+        "\n",
+        "class Cube(Volume):\n",
+        "  def __init__(self,a):\n",
+        "    self.a=a\n",
+        "  def vol(self):\n",
+        "    return self.a*self.a*self.a\n",
+        "\n",
+        "class Cuboid(Volume):\n",
+        "  def __init__(self,l,b,h):\n",
+        "    self.l=l\n",
+        "    self.b=b\n",
+        "    self.h=h\n",
+        "  def vol(self):\n",
+        "    return self.l*self.b*self.h\n",
+        "\n",
+        "class Sphere(Volume):\n",
+        "  def __init__(self,r):\n",
+        "    self.r=r\n",
+        "  def vol(self):\n",
+        "    return (4/3)*3.14*self.r*self.r*self.r\n",
+        "\n",
+        "class Cylinder(Volume):\n",
+        "  def __init__(self,r,h):\n",
+        "    self.r=r\n",
+        "    self.h=h\n",
+        "  def vol(self):\n",
+        "    return 3.14*self.r*self.r*self.h\n",
+        "\n",
+        "class HemiSphere(Volume):\n",
+        "  def __init__(self,r):\n",
+        "    self.r=r\n",
+        "  def vol(self):\n",
+        "    return (2/3)*3.14*self.r*self.r*self.r\n",
+        "\n",
+        "class Cone(Volume):\n",
+        "  def __init__(self,r,h):\n",
+        "    self.r=r\n",
+        "    self.h=h\n",
+        "  def vol(self):\n",
+        "    return (1/3)*3.14*self.r*self.r*self.h\n",
+        "\n",
+        "\n",
+        "c=Cube(5)\n",
+        "print(c.vol())\n",
+        "c=Cuboid(2,3,4)\n",
+        "print(c.vol())\n",
+        "c=Sphere(2)\n",
+        "print(c.vol())\n",
+        "c=Cylinder(2,4)\n",
+        "print(c.vol())\n",
+        "c=HemiSphere(10)\n",
+        "print(c.vol())\n",
+        "c=Cone(5,9)\n",
+        "print(c.vol())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Gmyc1lmFjhfE",
+        "outputId": "a5ab4bed-2585-4ebc-a8d6-cd95872d15e4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "125\n",
+            "24\n",
+            "33.49333333333333\n",
+            "50.24\n",
+            "2093.3333333333335\n",
+            "235.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Cars:\n",
+        "  def __init__(self,name,model,price):\n",
+        "    self.name=name\n",
+        "    self.model=model\n",
+        "    self.price=price\n",
+        "\n",
+        "class Volvo(Cars):\n",
+        "  def __init__(self,name,model,price):\n",
+        "    self.name=name\n",
+        "    self.model=model\n",
+        "    self.price=price\n",
+        "\n",
+        "class Tesla(Cars):\n",
+        "  def __init__(self,name,model,price):\n",
+        "    self.name=name\n",
+        "    self.model=model\n",
+        "    self.price=price\n",
+        "\n",
+        "class BMW(Cars):\n",
+        "  def __init__(self,name,model,price):\n",
+        "    self.name=name\n",
+        "    self.model=model\n",
+        "    self.price=price\n",
+        "\n",
+        "class Audi(Cars):\n",
+        "  def __init__(self,name,model,price):\n",
+        "    self.name=name\n",
+        "    self.model=model\n",
+        "    self.price=price\n",
+        "\n",
+        "class Ferrari(Cars):\n",
+        "  def __init__(self,name,model,price):\n",
+        "    self.name=name\n",
+        "    self.model=model\n",
+        "    self.price=price\n",
+        "\n",
+        "c=Volvo('Volvo','S90',25000000)\n",
+        "print(c.name)\n",
+        "print(c.model)\n",
+        "print(c.price)\n",
+        "c=Tesla('Tesla','Model Y',3799999)\n",
+        "print(c.name)\n",
+        "print(c.model)\n",
+        "print(c.price)\n",
+        "c=BMW('BMW','M8',55000000)\n",
+        "print(c.name)\n",
+        "print(c.model)\n",
+        "print(c.price)\n",
+        "c=Audi('Audi','A8',45000000)\n",
+        "print(c.name)\n",
+        "print(c.model)\n",
+        "print(c.price)\n",
+        "c=Ferrari('Ferrari','F8',4900000)\n",
+        "print(c.name)\n",
+        "print(c.model)\n",
+        "print(c.price)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rSJpkd4slkCn",
+        "outputId": "961ac5f6-e4b6-469b-d70d-130139f2fb86"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Volvo\n",
+            "S90\n",
+            "25000000\n",
+            "Tesla\n",
+            "Model Y\n",
+            "3799999\n",
+            "BMW\n",
+            "M8\n",
+            "55000000\n",
+            "Audi\n",
+            "A8\n",
+            "45000000\n",
+            "Ferrari\n",
+            "F8\n",
+            "4900000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Employee:\n",
+        "  def __init__(self,name,age,salary):\n",
+        "    self.name=name\n",
+        "    self.age=age\n",
+        "    self.salary=salary\n",
+        "class Mukesh(Employee):\n",
+        "  def __init__(self,name,age,salary):\n",
+        "    self.name=name\n",
+        "    self.age=age\n",
+        "    self.salary=salary\n",
+        "class Michelle(Employee):\n",
+        "  def __init__(self, name, age, salary):\n",
+        "    self.name = name\n",
+        "    self.age = age\n",
+        "    self.salary = salary\n",
+        "class John(Employee):\n",
+        "  def __init__(self, name, age, salary):\n",
+        "    self.name = name\n",
+        "    self.age = age\n",
+        "    self.salary = salary\n",
+        "\n",
+        "c=Mukesh('Mukesh',32,21000)\n",
+        "print(c.name)\n",
+        "print(c.age)\n",
+        "print(c.salary)\n",
+        "c=Michelle('Michelle',28,19000)\n",
+        "print(c.name)\n",
+        "print(c.age)\n",
+        "print(c.salary)\n",
+        "c=John('John',40,40000)\n",
+        "print(c.name)\n",
+        "print(c.age)\n",
+        "print(c.salary)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Cb6pIprEoNfL",
+        "outputId": "e67dfe13-0efd-4b6c-a6f6-3e59b2b5c9ca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mukesh\n",
+            "32\n",
+            "21000\n",
+            "Michelle\n",
+            "28\n",
+            "19000\n",
+            "John\n",
+            "40\n",
+            "40000\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
